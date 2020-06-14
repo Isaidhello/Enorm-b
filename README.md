@@ -1,7 +1,7 @@
 # Enorm Webinars
 
 Enorm Webinars is een omgeving om webinars te hosten, bekijken en op te slaan.
-Het project is gebouw met ReactJS.
+Het project is gebouwd met ReactJS.
 
 ## Installatie
 Download en installeer node.js (https://nodejs.org/en/download/)
