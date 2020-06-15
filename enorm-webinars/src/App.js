@@ -1,11 +1,11 @@
 import React from 'react';
-import { Grid } from '@material-ui/core'
-import ReactPlayer from 'react-player'
-import SearchAppBar from './components/navbar';
-import Button from '@material-ui/core/Button';
+// import { Grid } from '@material-ui/core'
+// import ReactPlayer from 'react-player'
+// import SearchAppBar from './components/navbar';
+// import Button from '@material-ui/core/Button';
 import './App.css';
-import addPlaylist from './icons/add_playlist.png'
-import firebase from './firebase';
+// import addPlaylist from './icons/add_playlist.png'
+import firebase, { db } from './firebase';
 
 // function App() {
 //   const [Video, setVideo] = React.useState([])
@@ -55,7 +55,7 @@ class App extends React.Component {
   //run as soon as app component on screen
   componentDidMount() {
     console.log('mounted')
-    firebase.collection('Video')//ga in collectie Video
+    db.collection('Video')//ga in collectie Video
       .get() //haal alle bestanden uit die collectie
       .then(snapshot => {  //als de data terug is dan... (data komt terug als snapshot)
         console.log(snapshot)
