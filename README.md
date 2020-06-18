@@ -5,9 +5,8 @@ Het project is gebouwd met ReactJS.
 
 ## Afhankelijkheden
 Download en installeer node.js (https://nodejs.org/en/download/)
-Material UI
-Firebase
-In het project is gebruik gemaakt van de React Router DOM -> 
+Installeer Material UI met npm install @material-ui/core
+Installeer firebase meet npm install --save firebase
 
 ## Installatie
 Gebruik de command 'npm start' in de root folder om het project op te starten.
