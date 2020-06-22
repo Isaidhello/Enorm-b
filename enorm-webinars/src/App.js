@@ -15,8 +15,8 @@ function App() {
         </Grid>
 
         <Grid item sm={12}>
-          <Videoplayer />
-          {/* <Home /> */}
+          {/* <Videoplayer /> */}
+          <Home />
         </Grid>
       </Grid>
 
