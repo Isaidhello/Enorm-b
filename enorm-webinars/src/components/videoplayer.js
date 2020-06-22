@@ -35,10 +35,6 @@ export default class Videoplayer extends React.Component {
 
                 <Grid display="flex" flexDirection="column" container sm={12}>
 
-                    {/* <Grid item sm={12}>
-            <SearchAppBar />
-          </Grid> */}
-
                     <Grid item sm={7}>
                         <div>
                             {
@@ -55,7 +51,18 @@ export default class Videoplayer extends React.Component {
                         </div>
                     </Grid>
 
-                    <Button variant="contained" onClick={() => { alert('clicked') }}><img src={addPlaylist} alt="add_playlist" /></Button>
+                    <Button variant="contained" onClick={() => {
+
+                        db.collection("Playlist").where("playlistID", "==", 12)
+                            .get()
+                            .then(snapshot => {
+                                snapshot.docs.forEach(doc => {
+                                    console.log(doc.id, doc.data())
+                                })
+                            })
+                    }}>
+                        <img src={addPlaylist} alt="add_playlist" />
+                    </Button>
 
                 </Grid>
 
