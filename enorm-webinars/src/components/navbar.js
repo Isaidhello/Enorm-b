@@ -13,15 +13,14 @@ function Navbar() {
                     className="d-inline-block align-top"
                     alt="" />
             </Link>
-            <ul>
 
-                <Link to="/buildE/Videoplayer">
-                    <li>Videoplayer</li>
+            <Link to="/buildE/Videoplayer">
+                Webinars
                 </Link>
-                <Link to="/buildE/Contact">
-                    <li>Contact</li>
+            <Link to="/buildE/Contact">
+                Contact
                 </Link>
-            </ul>
+
         </nav>
 
 
