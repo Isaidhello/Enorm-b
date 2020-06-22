@@ -1,31 +1,31 @@
-import React from 'react'
-import Logo from '../images/logo.PNG'
-import { BrowserRouter, Link } from 'react-router-dom';
+import React from 'react';
+import Logo from '../images/logo.PNG';
+import { Link } from 'react-router-dom';
 
-
-const Navbar = () => {
+function Navbar() {
     return (
-        <BrowserRouter>
-            <nav className="nav-wrapper grey darken-3">
-                <div className="enormlogov10.png">
 
-                    <Link to="/buildE">
-                        <img src={Logo}
-                            width="170px"
-                            height="65px"
-                            className="d-inline-block align-top"
-                            alt="" /></Link>
+        <nav>
+            <Link to="/buildE/">
+                <img src={Logo}
+                    width="170px"
+                    height="65px"
+                    className="d-inline-block align-top"
+                    alt="" />
+            </Link>
+            <ul>
+
+                <Link to="/buildE/Videoplayer">
+                    <li>Videoplayer</li>
+                </Link>
+                <Link to="/buildE/Contact">
+                    <li>Contact</li>
+                </Link>
+            </ul>
+        </nav>
 
 
-                    <ul className="right">
-                        <li><Link to="/buildE/videoplayer"><h2>Videoplayer</h2></Link></li>
-                        <li><Link to="/buildE/Contact"><h2>Contact</h2></Link></li>
-                    </ul>
-
-                </div>
-            </nav>
-        </BrowserRouter>
     )
 }
 
-export default Navbar
+export default Navbar;
