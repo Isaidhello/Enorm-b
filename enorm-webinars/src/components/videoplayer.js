@@ -14,8 +14,8 @@ export default class Videoplayer extends React.Component {
     //run as soon as app component on screen
     componentDidMount() {
         console.log('mounted')
-        db.collection('Video')//ga in collectie Video
-            .get() //haal alle bestanden uit die collectie
+        db.collection('Video').where("vidID", "==", 2)//ga in collectie Video en pak met vidID 2
+            .get()
             .then(snapshot => {  //als de data terug is dan... 
                 const Video = []
                 snapshot.forEach(doc => {
@@ -23,7 +23,7 @@ export default class Videoplayer extends React.Component {
                     Video.push(data)
                 })
                 this.setState({ Video: Video })
-                console.log(Video)
+                console.log("Video data:", Video)
 
             })
             .catch(error => console.log(error))
@@ -43,7 +43,7 @@ export default class Videoplayer extends React.Component {
                         <div>
                             {
                                 this.state.Video &&
-                                this.state.Video.slice(2).map(Video => { //slice 2 uit de array dus 1 blijft over + wat de functie doet is maakt alles uit de array beschikbaar als 'Video'
+                                this.state.Video.map(Video => { //slice 2 uit de array dus 1 blijft over + wat de functie doet is maakt alles uit de array beschikbaar als 'Video'
                                     return ( //return een reactplayer met de opgehaalde video url
                                         <div>
                                             <ReactPlayer controls
