@@ -14,8 +14,8 @@ export default class Videoplayer extends React.Component {
     //run as soon as app component on screen
     componentDidMount() {
         console.log('mounted')
-        db.collection('Video')//ga in collectie Video
-            .get() //haal alle bestanden uit die collectie
+        db.collection('Video').where("vidID", "==", 2)//ga in collectie Video en pak met vidID 2
+            .get()
             .then(snapshot => {  //als de data terug is dan... 
                 const Video = []
                 snapshot.forEach(doc => {
@@ -23,7 +23,7 @@ export default class Videoplayer extends React.Component {
                     Video.push(data)
                 })
                 this.setState({ Video: Video })
-                console.log(Video)
+                console.log("Video data:", Video)
 
             })
             .catch(error => console.log(error))
@@ -35,15 +35,11 @@ export default class Videoplayer extends React.Component {
 
                 <Grid display="flex" flexDirection="column" container sm={12}>
 
-                    {/* <Grid item sm={12}>
-            <SearchAppBar />
-          </Grid> */}
-
                     <Grid item sm={7}>
                         <div>
                             {
                                 this.state.Video &&
-                                this.state.Video.slice(2).map(Video => { //slice 2 uit de array dus 1 blijft over + wat de functie doet is maakt alles uit de array beschikbaar als 'Video'
+                                this.state.Video.map(Video => { //slice 2 uit de array dus 1 blijft over + wat de functie doet is maakt alles uit de array beschikbaar als 'Video'
                                     return ( //return een reactplayer met de opgehaalde video url
                                         <div>
                                             <ReactPlayer controls
@@ -55,7 +51,30 @@ export default class Videoplayer extends React.Component {
                         </div>
                     </Grid>
 
-                    <Button variant="contained" onClick={() => { alert('clicked') }}><img src={addPlaylist} alt="add_playlist" /></Button>
+                    <Button variant="contained" onClick={() => {
+
+                        // db.collection("Playlist").where("naam", "==", "play1")
+                        //     .get()
+                        //     .then(snapshot => {
+                        //         snapshot.docs.forEach(doc => {
+                        //             console.log(doc.id, doc.data())
+                        //         })
+                        //     })
+
+                        db.collection("Playlist").doc("1").set({
+                            name: "playToegevoegd",
+                            video: "dit is een vid titel"
+                        })
+                            .then(function () {
+                                console.log("Document successfully written!");
+                            })
+                            .catch(function (error) {
+                                console.error("Error writing document: ", error);
+                            });
+
+                    }}>
+                        <img src={addPlaylist} alt="add_playlist" />
+                    </Button>
 
                 </Grid>
 

@@ -16,70 +16,69 @@ const Home = () => {
                      the webinar. <br></br>With them we discuss how it is to work with Enorm from start to finish.</h5>
                 </div>
                 <div className="video">
-                    <Iframe className="video1" url="http://www.youtube.com/embed/yn6fNWccnZE"
+                    <Iframe className="video1" url="https://www.youtube.com/embed/doFfDfI59o8"
                         frameBorder="0"
                         width="580px"
                         height="280px"
                         id="myId"
-                        className="video"
                         /*display="initial"*/
                         /*position="right"*/ />
                 </div>
             </div>
             <div className="headerContent">
-            <h5 className="headerContent">Design</h5>
+                <h5 className="headerContent">Design</h5>
             </div>
             <div className="contentContainer">
                 <img
-                    src="images/thumb1.png"
+                    src="/images/thumb1.png"
                     width="350px"
                     height="200px"
                     className="d-inline-block align-top"
                     alt="enorm"
                 />
                 <img
-                    src="images/thumb2.png"
+                    src="/images/thumb2.png"
                     width="350px"
                     height="199.5px"
                     className="d-inline-block align-top"
                     alt="enorm"
                 />
-            
-            <img
-                src="images/thumb5.png"
-                width="350px"
-                height="200px"
-                className="d-inline-block align-top"
-                alt="enorm"
-            />
+
+                <img
+                    src="/images/thumb5.png"
+                    width="350px"
+                    height="200px"
+                    className="d-inline-block align-top"
+                    alt="enorm"
+                />
             </div>
             <div className="headerContent">
-            <h5 className="headerContent">Development</h5>
+                <h5 className="headerContent">Development</h5>
             </div>
             <div className="contentContainer">
-            <img
-                src="images/thumb4.png"
-                width="350px"
-                height="200px"
-                className="d-inline-block align-top"
-                alt="enorm"
-            />
-            <img
-                src="images/thumb3.png"
-                width="350px"
-                height="200px"
-                className="d-inline-block align-top"
-                alt="enorm"
-            />
-            <img
-                src="images/thumb6.png"
-                width="350px"
-                height="200px"
-                className="d-inline-block align-top"
-                alt="enorm"
-            />
+                <img
+                    src="/images/thumb4.png"
+                    width="350px"
+                    height="200px"
+                    className="d-inline-block align-top"
+                    alt="enorm"
+                />
+                <img
+                    src="/images/thumb3.png"
+                    width="350px"
+                    height="200px"
+                    className="d-inline-block align-top"
+                    alt="enorm"
+                />
+                <img
+                    src="/images/thumb6.png"
+                    width="350px"
+                    height="200px"
+                    className="d-inline-block align-top"
+                    alt="enorm"
+                />
 
-        </div>
+            </div>
         </div>
     )
 }
