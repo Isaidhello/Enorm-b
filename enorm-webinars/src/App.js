@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import './App.css';
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar';
 import Switcher from './components/Switcher';
 
 
