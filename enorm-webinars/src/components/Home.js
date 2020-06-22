@@ -38,7 +38,7 @@ const Home = () => {
                     alt="enorm"
                 />
                 <img
-                    src="/images/thumb2.png"
+                    src="./images/thumb2.png"
                     width="350px"
                     height="199.5px"
                     className="d-inline-block align-top"
@@ -46,7 +46,7 @@ const Home = () => {
                 />
 
                 <img
-                    src="/images/thumb5.png"
+                    src="./images/thumb5.png"
                     width="350px"
                     height="200px"
                     className="d-inline-block align-top"
@@ -58,21 +58,21 @@ const Home = () => {
             </div>
             <div className="contentContainer">
                 <img
-                    src="/images/thumb4.png"
+                    src="./images/thumb4.png"
                     width="350px"
                     height="200px"
                     className="d-inline-block align-top"
                     alt="enorm"
                 />
                 <img
-                    src="/images/thumb3.png"
+                    src="./images/thumb3.png"
                     width="350px"
                     height="200px"
                     className="d-inline-block align-top"
                     alt="enorm"
                 />
                 <img
-                    src="/images/thumb6.png"
+                    src="./images/thumb6.png"
                     width="350px"
                     height="200px"
                     className="d-inline-block align-top"
