@@ -23,7 +23,7 @@ export default class Videoplayer extends React.Component {
                     Video.push(data)
                 })
                 this.setState({ Video: Video })
-                console.log(snapshot)
+                console.log(Video)
 
             })
             .catch(error => console.log(error))
