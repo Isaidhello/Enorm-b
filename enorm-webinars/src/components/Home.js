@@ -1,5 +1,6 @@
 import React from 'react'
 import Iframe from 'react-iframe'
+import { withRouter } from 'react-router';
 
 const Home = () => {
 
@@ -82,4 +83,4 @@ const Home = () => {
         </div>
     )
 }
-export default Home
+export default withRouter(Home)
