@@ -1,9 +1,10 @@
 import React from 'react';
 import { Grid } from '@material-ui/core'
 import ReactPlayer from 'react-player'
-// import SearchAppBar from './components/navbar';
 import Button from '@material-ui/core/Button';
 import addPlaylist from '../icons/add_playlist.png'
+import remove from '../icons/remove.png'
+import firebase from 'firebase'
 import { db } from '../firebase';
 
 
@@ -53,19 +54,11 @@ export default class Videoplayer extends React.Component {
 
                     <Button variant="contained" onClick={() => {
 
-                        // db.collection("Playlist").where("naam", "==", "play1")
-                        //     .get()
-                        //     .then(snapshot => {
-                        //         snapshot.docs.forEach(doc => {
-                        //             console.log(doc.id, doc.data())
-                        //         })
-                        //     })
-
                         db.collection("Playlist").doc("1").set({
-                            name: "playToegevoegd",
                             video: "dit is een vid titel"
                         })
                             .then(function () {
+                                alert("Added to your playlist")
                                 console.log("Document successfully written!");
                             })
                             .catch(function (error) {
@@ -74,6 +67,23 @@ export default class Videoplayer extends React.Component {
 
                     }}>
                         <img src={addPlaylist} alt="add_playlist" />
+                    </Button>
+
+                    <Button variant="contained" onClick={() => {
+
+                        db.collection("Playlist").doc("1").update({
+                            video: firebase.firestore.FieldValue.delete()
+                        })
+                            .then(function () {
+                                alert("Removed from your playlist")
+                                console.log("Document successfully deleted!");
+                            })
+                            .catch(function (error) {
+                                console.error("Error writing document: ", error);
+                            });
+
+                    }}>
+                        <img src={remove} alt="remove_playlist" />
                     </Button>
 
                 </Grid>
