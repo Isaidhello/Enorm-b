@@ -1,9 +1,8 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import './App.css';
-import Videoplayer from './components/videoplayer';
-import Home from './components/Home';
 import Navbar from './components/navbar';
+import Switcher from './components/Switcher';
 
 
 function App() {
@@ -15,8 +14,7 @@ function App() {
         </Grid>
 
         <Grid item sm={12}>
-          {/* <Videoplayer /> */}
-          <Home />
+          <Switcher />
         </Grid>
       </Grid>
 

@@ -30,7 +30,7 @@ const Home = () => {
             </div>
             <div className="contentContainer">
                 <img
-                    src="/images/thumb1.png"
+                    src="./images/thumb1.png"
                     width="350px"
                     height="200px"
                     className="d-inline-block align-top"
