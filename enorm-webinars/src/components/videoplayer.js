@@ -53,13 +53,25 @@ export default class Videoplayer extends React.Component {
 
                     <Button variant="contained" onClick={() => {
 
-                        db.collection("Playlist").where("playlistID", "==", 12)
-                            .get()
-                            .then(snapshot => {
-                                snapshot.docs.forEach(doc => {
-                                    console.log(doc.id, doc.data())
-                                })
+                        // db.collection("Playlist").where("naam", "==", "play1")
+                        //     .get()
+                        //     .then(snapshot => {
+                        //         snapshot.docs.forEach(doc => {
+                        //             console.log(doc.id, doc.data())
+                        //         })
+                        //     })
+
+                        db.collection("Playlist").doc("1").set({
+                            name: "playToegevoegd",
+                            video: "dit is een vid titel"
+                        })
+                            .then(function () {
+                                console.log("Document successfully written!");
                             })
+                            .catch(function (error) {
+                                console.error("Error writing document: ", error);
+                            });
+
                     }}>
                         <img src={addPlaylist} alt="add_playlist" />
                     </Button>
