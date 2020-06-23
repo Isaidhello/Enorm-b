@@ -14,9 +14,9 @@ Installeer firebase meet npm install --save firebase
 Gebruik de command 'npm start' in de root folder om het project op te starten.
 
 ## Bijdrage
-Aan dit project is gewerkt door:
-Isaidhello
-Furkan-rgb: Videoplayer pagina, verbinding met de database (schrijven,lezen,verwijderen), Navbar (navigatie met react-router-dom, switch)
+Aan dit project is gewerkt door:<br/>
+Isaidhello:<br/>
+<br/>Furkan-rgb:<br/>-Videoplayer pagina,<br/>-verbinding met de database (schrijven,lezen,verwijderen),<br/>-Navbar (navigatie met react-router-dom, switch)
 
 ## Licentie
 [MIT](https://choosealicense.com/licenses/mit/)
