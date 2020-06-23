@@ -15,6 +15,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -35,14 +36,12 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'left',
     color: 'white',
 
   },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
+
+  
   form: {
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(3),
@@ -50,6 +49,14 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+
+  textField: {
+    color: 'white',
+    borderColor: 'white'
+},
+input: {
+    color: 'white'
+}
 }));
 
 export default function CenteredGrid() {
@@ -61,25 +68,26 @@ export default function CenteredGrid() {
       <Grid container spacing={3}>
         <Grid item xs={6}>
           <Paper className={classes.paper}>
-            We bedenken graag een online strategie die werkt.
-Interesse in een website of online marketing? Bel ons gerust! ​
+                    <Typography component="h1" variant="h5">
+          Krijg controle over je online resultaten<p></p>
+        </Typography>
+Zou je graag willen meedoen of helpen aan onze webinars? Neem vooral contact op met ons en misschien komt u ons vergezelen in een toekomstige webinar.<p></p>
 
-Graag sparren we met ambitieuze mensen met een gaaf idee. Overtuig ons met een goede pitch! Dan denken wij met je mee.
+Graag sparren we met ambitieuze mensen met een gaaf idee. Overtuig ons met een goede pitch! Dan denken wij met je mee.<p></p>
 
-Stationsplein 3
-4811 BB  BREDA
-The Netherlands
+Stationsplein 3<br></br>
+4811 BB  BREDA<br></br>
+The Netherlands<p></p>
  
-hello@enorm.com
-+31 (0) 85 018 50 50
+hello@enorm.com<br></br>
++31 (0) 85 018 50 50<p></p>
 
-KVK: 61950963
-BTW: NL854563155B01 
+KVK: 61950963<br></br>
+BTW: NL854563155B01 <br></br>
 IBAN: NL51ABNA0442769431</Paper>
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>
-          <div className={classes.paper}>
         <Typography component="h1" variant="h5">
           Stel ons een vraag.
         </Typography>
@@ -87,14 +95,17 @@ IBAN: NL51ABNA0442769431</Paper>
           <Grid container spacing={2}>
           <Grid item xs={12}>
               <TextField
-                autoComplete="fname"
-                name="Naam"
                 variant="outlined"
                 required
                 fullWidth
-                id="naam"
+                name="naam"
                 label="Naam"
-                autoFocus
+                type="naam"
+                id="naam"
+                autoComplete="naam"
+                InputProps={{
+                  className: classes.textField,
+              }}
               />
             </Grid>
             <Grid item xs={12}>
@@ -102,9 +113,10 @@ IBAN: NL51ABNA0442769431</Paper>
                 variant="outlined"
                 required
                 fullWidth
-                id="email"
-                label="E-mail"
                 name="email"
+                label="E-mail"
+                type="e-mail"
+                id="e-mail"
                 autoComplete="email"
               />
             </Grid>
@@ -123,12 +135,13 @@ IBAN: NL51ABNA0442769431</Paper>
  
             <Grid item xs={12}>
             <TextField
+          variant="outlined"
+          fullWidth
           id="outlined-multiline-static"
-          label="Multiline"
+          label=""
           multiline
           rows={4}
-          defaultValue="Default Value"
-          variant="outlined"
+          defaultValue="Uw tekst hier"
         />
             </Grid>
  
@@ -136,16 +149,15 @@ IBAN: NL51ABNA0442769431</Paper>
           </Grid>
           <Button
             type="submit"
-            fullWidth
             variant="contained"
-            color="primary"
+            color="secondary"
             className={classes.submit}
           >
             Versturen
           </Button>
 
         </form>
-      </div>
+
             </Paper>
         </Grid>
       </Grid>
