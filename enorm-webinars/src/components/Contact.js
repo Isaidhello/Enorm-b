@@ -74,10 +74,11 @@ export default function CenteredGrid() {
 
   return (
     <div className={classes.root}>
+                <Container maxWidth="lg">
       <h3 className="center">Contact</h3>
       <Grid container spacing={3}>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>
+
                     <Typography component="h1" variant="h5">
           Krijg controle over je online resultaten<p></p>
         </Typography>
@@ -94,10 +95,9 @@ hello@enorm.com<br></br>
 
 KVK: 61950963<br></br>
 BTW: NL854563155B01 <br></br>
-IBAN: NL51ABNA0442769431</Paper>
+IBAN: NL51ABNA0442769431
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>
         <Typography component="h1" variant="h5">
           Stel ons een vraag.
         </Typography>
@@ -128,6 +128,9 @@ IBAN: NL51ABNA0442769431</Paper>
                 type="e-mail"
                 id="e-mail"
                 autoComplete="email"
+                InputProps={{
+                  className: classes.textField,
+              }}
               />
             </Grid>
             <Grid item xs={12}>
@@ -140,6 +143,9 @@ IBAN: NL51ABNA0442769431</Paper>
                 type="telefoon"
                 id="telefoon"
                 autoComplete="nummer"
+                InputProps={{
+                  className: classes.textField,
+              }}
               />
             </Grid>
  
@@ -179,9 +185,9 @@ IBAN: NL51ABNA0442769431</Paper>
 
         </form>
 
-            </Paper>
         </Grid>
       </Grid>
+      </Container>
     </div>
   );
 }
