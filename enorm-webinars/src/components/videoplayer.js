@@ -6,6 +6,7 @@ import addPlaylist from '../icons/add_playlist.png'
 import remove from '../icons/remove.png'
 import firebase from 'firebase'
 import { db } from '../firebase';
+import IconButton from '@material-ui/core/IconButton';
 
 
 export default class Videoplayer extends React.Component {
@@ -51,42 +52,44 @@ export default class Videoplayer extends React.Component {
                             }
                         </div>
                     </Grid>
-
-                    <Button variant="contained" onClick={() => {
-
-                        db.collection("Playlist").doc("1").set({
-                            video: "dit is een vid titel"
-                        })
-                            .then(function () {
-                                alert("Added to your playlist")
-                                console.log("Document successfully written!");
-                            })
-                            .catch(function (error) {
-                                console.error("Error writing document: ", error);
-                            });
-
-                    }}>
-                        <img src={addPlaylist} alt="add_playlist" />
-                    </Button>
-
-                    <Button variant="contained" onClick={() => {
-
-                        db.collection("Playlist").doc("1").update({
-                            video: firebase.firestore.FieldValue.delete()
-                        })
-                            .then(function () {
-                                alert("Removed from your playlist")
-                                console.log("Document successfully deleted!");
-                            })
-                            .catch(function (error) {
-                                console.error("Error writing document: ", error);
-                            });
-
-                    }}>
-                        <img src={remove} alt="remove_playlist" />
-                    </Button>
-
                 </Grid>
+                {/* Knop voor toevoegen */}
+                <IconButton variant="contained" onClick={() => {
+
+                    db.collection("Playlist").doc("1").set({
+                        video: "dit is een vid titel"
+                    })
+                        .then(function () {
+                            alert("Added to your playlist")
+                            console.log("Document successfully written!");
+                        })
+                        .catch(function (error) {
+                            console.error("Error writing document: ", error);
+                        });
+
+                }}>
+                    <img src={addPlaylist} alt="add_playlist" />
+                </IconButton>
+
+                {/* Knop voor verwijdered */}
+                <IconButton variant="contained" onClick={() => {
+
+                    db.collection("Playlist").doc("1").update({
+                        video: firebase.firestore.FieldValue.delete()
+                    })
+                        .then(function () {
+                            alert("Removed from your playlist")
+                            console.log("Document successfully deleted!");
+                        })
+                        .catch(function (error) {
+                            console.error("Error writing document: ", error);
+                        });
+
+                }}>
+                    <img src={remove} alt="remove_playlist" />
+                </IconButton>
+
+
 
             </div>
         )
