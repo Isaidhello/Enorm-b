@@ -41,6 +41,16 @@ const useStyles = makeStyles((theme) => ({
 
   },
 
+  button: {
+    background: '#CC0C00',
+    border: 0,
+    color: 'white',
+    height: 45,
+    padding: '0 30px',
+  },
+  label: {
+    textTransform: 'capitalize',
+  },
   
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -135,6 +145,10 @@ IBAN: NL51ABNA0442769431</Paper>
  
             <Grid item xs={12}>
             <TextField
+                  classes={{
+                    textField: classes.button, // class name, e.g. `classes-nesting-root-x`
+                    input: classes.label, // class name, e.g. `classes-nesting-label-x`
+                  }}
           variant="outlined"
           fullWidth
           id="outlined-multiline-static"
@@ -142,15 +156,22 @@ IBAN: NL51ABNA0442769431</Paper>
           multiline
           rows={4}
           defaultValue="Uw tekst hier"
+          InputProps={{
+            className: classes.textField,
+        }}
         />
             </Grid>
  
  
           </Grid>
+
           <Button
+      classes={{
+        root: classes.button, // class name, e.g. `classes-nesting-root-x`
+        label: classes.label, // class name, e.g. `classes-nesting-label-x`
+      }}
             type="submit"
             variant="contained"
-            color="secondary"
             className={classes.submit}
           >
             Versturen
