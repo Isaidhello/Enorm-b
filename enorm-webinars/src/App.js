@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import './App.css';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar';
 import Switcher from './components/Switcher';
 import { BrowserRouter as Router } from 'react-router-dom';
 
