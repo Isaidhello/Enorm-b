@@ -15,7 +15,8 @@ Gebruik de command 'npm start' in de root folder om het project op te starten.
 
 ## Bijdrage
 Aan dit project is gewerkt door:
-Isaidhello, Furkan-rgb, Zonar94
+Isaidhello
+Furkan-rgb: Videoplayer pagina, verbinding met de database (schrijven,lezen,verwijderen), Navbar (navigatie met react-router-dom, switch)
 
 ## Licentie
 [MIT](https://choosealicense.com/licenses/mit/)
