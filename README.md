@@ -6,8 +6,8 @@ Het project is gebouwd met ReactJS.
 ![pic_enorm](https://user-images.githubusercontent.com/50831308/85044677-3f147880-b18e-11ea-97dc-b9e635979cea.jpeg)
 
 ## Afhankelijkheden
-Download en installeer node.js (https://nodejs.org/en/download/)
-Installeer Material UI met npm install @material-ui/core
+Download en installeer node.js (https://nodejs.org/en/download/)<br/>
+Installeer Material UI met npm install @material-ui/core<br/>
 Installeer firebase meet npm install --save firebase
 
 ## Installatie
