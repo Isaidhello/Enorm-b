@@ -29,11 +29,15 @@ function Copyright() {
 }
 
 const useStyles = makeStyles((theme) => ({
+
   paper: {
+    backgroundColor: "#404040",
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    color: 'white',
+
   },
   avatar: {
     margin: theme.spacing(1),
@@ -116,6 +120,18 @@ IBAN: NL51ABNA0442769431</Paper>
                 autoComplete="nummer"
               />
             </Grid>
+ 
+            <Grid item xs={12}>
+            <TextField
+          id="outlined-multiline-static"
+          label="Multiline"
+          multiline
+          rows={4}
+          defaultValue="Default Value"
+          variant="outlined"
+        />
+            </Grid>
+ 
  
           </Grid>
           <Button
