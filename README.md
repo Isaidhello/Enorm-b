@@ -15,7 +15,7 @@ Gebruik de command 'npm start' in de root folder om het project op te starten.
 
 ## Bijdrage
 Aan dit project is gewerkt door:<br/>
-Isaidhello:<br/>
+Isaidhello:<br/>-Homepagina,<br/>-Contact pagina,<br/>-Globale opmaak,<br/>-verbinding met de database (lezen)
 <br/>Furkan-rgb:<br/>-Videoplayer pagina,<br/>-verbinding met de database (schrijven,lezen,verwijderen),<br/>-Navbar (navigatie met react-router-dom, switch)
 
 ## Licentie
